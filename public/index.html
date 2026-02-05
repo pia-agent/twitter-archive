@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIA's Twitter Archive</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-content">
+        <h1>🐦 PIA's Twitter Archive</h1>
+        <div class="header-actions">
+          <button id="refreshBtn" class="btn btn-primary">
+            <span class="icon">↻</span> Refresh
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="sidebar">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search bookmarks...">
+          <button id="searchBtn" class="btn">Search</button>
+        </div>
+        
+        <div class="stats-card">
+          <h3>📊 Stats</h3>
+          <div class="stat-row">
+            <span class="stat-label">Total:</span>
+            <span id="totalCount" class="stat-value">-</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label">Status:</span>
+            <span id="statusIndicator" class="status-badge">Checking...</span>
+          </div>
+        </div>
+
+        <div class="tags-section">
+          <h3>🏷️ Tags</h3>
+          <div id="tagsList" class="tags-list">
+            <p class="empty">Loading tags...</p>
+          </div>
+          <button id="clearFilterBtn" class="btn btn-small hidden">Clear Filter</button>
+        </div>
+      </aside>
+
+      <section class="content">
+        <div id="loadingState" class="loading hidden">
+          <div class="spinner"></div>
+          <p>Loading bookmarks...</p>
+        </div>
+
+        <div id="bookmarksList" class="bookmarks-list">
+          <p class="empty-state">Click "Refresh" to load your Twitter bookmarks</p>
+        </div>
+
+        <div id="pagination" class="pagination hidden">
+          <button id="prevPage" class="btn btn-small">← Previous</button>
+          <span id="pageInfo" class="page-info">Page 1 of 1</span>
+          <button id="nextPage" class="btn btn-small">Next →</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Bookmark Detail Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

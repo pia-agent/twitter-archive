@@ -1,0 +1,17 @@
+{
+  "name": "pia-twitter-archive",
+  "version": "1.0.0",
+  "description": "PIA's Twitter Bookmarks Manager",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["twitter", "bookmarks", "archive"],
+  "author": "PIA",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^9.4.3",
+    "express": "^4.18.2"
+  }
+}
