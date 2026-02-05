@@ -2,7 +2,7 @@
 
 A self-hosted Twitter bookmarks manager that fetches your bookmarks via the bird CLI and provides a clean, searchable web interface.
 
-![Screenshot](https://via.placeholder.com/800x400/0f0f23/6366f1?text=PIA's+Twitter+Archive)
+![Screenshot](./screenshot.png)
 
 ## Features
 
